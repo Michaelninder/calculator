@@ -9,3 +9,7 @@ body a{
     text-decoration: none;
 }
 
+.calculator {
+    padding: 50px;
+    background-color: white;
+}
