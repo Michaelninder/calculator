@@ -101,6 +101,9 @@ body a {
 
 .calculator .input-btns .input-btn.reset {
     background-color: var(--calculator-reset-input-button-background-color);
+}
+
+.calculator .input-btns .input-btn.reset #reset-btn {
     color: var(--calculator-reset-input-button-color);
 }
 
@@ -108,7 +111,6 @@ body a {
     grid-column: span 1;
     border-radius: 30px;
 }
-
 
 
 
