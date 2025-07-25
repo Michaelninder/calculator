@@ -13,8 +13,8 @@ body {
     color: var(--main-text-color);
 }
 
-body a{
-    color: --main-text-color;
+body a {
+    color: var(--main-text-color);
     text-decoration: none;
 }
 
