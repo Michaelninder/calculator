@@ -1,81 +1,52 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="calculator">
-        <div class="display">
-            <p id="display-content"></p>
-        </div>
+:root {
+    --background-color: antiquewhite;
+    --main-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
+    --main-text-color: gray;
+    
+    --calculator-padding: 50px;
+    --calculator-background-color: white;
+    --calculator-input-button-background-color: gray;
+    --calculator-number-input-button-background-color: orange;
+    --calculator-input-button-border-color: gray;
+    --calculator-input-button-color: antiquewhite ;
+}
 
-        <div class="input-btns">
-            <div class="input-btn">
-                <a href="" id="input-btn">1</a>
-            </div>
+body {
+    background-color: var(--background-color);
+    font-family: var(--main-font-family);
+    color: var(--main-text-color);
+}
 
-            <div class="input-btn">
-                <a href="" id="input-btn">2</a>
-            </div>
-            
-            <div class="input-btn">
-                <a href="" id="input-btn">3</a>
-            </div>
-            
-            <div class="input-btn">
-                <a href="" id="input-btn">4</a>
-            </div>
-            
-            <div class="input-btn">
-                <a href="" id="input-btn">5</a>
-            </div>
-            
-            <div class="input-btn">
-                <a href="" id="input-btn">6</a>
-            </div>
-            
-            <div class="input-btn">
-                <a href="" id="input-btn">7</a>
-            </div>
-            
-            <div class="input-btn">
-                <a href="" id="input-btn">8</a>
-            </div>
-            
-            <div class="input-btn">
-                <a href="" id="input-btn">9</a>
-            </div>
-            
-            <div class="input-btn">
-                <a href="" id="input-btn">0</a>
-            </div>
-            
-            <div class="input-btn">
-                <a href="" id="input-btn">=</a>
-            </div>
-            
-            <div class="input-btn">
-                <a href="" id="input-btn">+</a>
-            </div>
-            
-            <div class="input-btn">
-                <a href="" id="input-btn">-</a>
-            </div>
-            
-            <div class="input-btn">
-                <a href="" id="input-btn">*</a>
-            </div>
-            
-            <div class="input-btn">
-                <a href="" id="input-btn">%</a>
-            </div>
-        </div>
-    </div>
+body a {
+    color: var(--main-text-color);
+    text-decoration: none;
+}
 
+.calculator {
+    padding: var(--calculator-padding);
+    background-color: var(--calculator-background-color);
+    display: flex;
+    gap: 5px;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.calculator .input-btns {
+    padding-block: 5px;
+    padding-inline: 5px;
+}
+
+.calculator .input-btns .input-btn {
+    background-color: var(--calculator-input-button-background-color);
+    border: 1px solid var(--calculator-input-button-border-color);
+    border-radius: 12px;
+    padding: 7px;
+    margin-block: 5px;
+
+}
+
+.calculator .input-btns .input-btn a {
+    color: var(--calculator-input-button-color);
+}
+
+.calculator .input-btns .input-btn .number {
+    background-color: var(--calculator-number-input-button-background-color);
+}
