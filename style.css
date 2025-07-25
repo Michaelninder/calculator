@@ -6,6 +6,7 @@
     --calculator-padding: 50px;
     --calculator-background-color: white;
     --calculator-input-button-background-color: gray;
+    --calculator-number-input-button-background-color: orange;
     --calculator-input-button-border-color: gray;
     --calculator-input-button-color: antiquewhite ;
 }
@@ -35,8 +36,8 @@ body a {
 
 .calculator .input-btns .input-btn {
     background-color: var(--calculator-input-button-background-color);
-    border: 2px solid var(--calculator-input-button-border-color);
-    border-radius: 2px;
+    border: 1px solid var(--calculator-input-button-border-color);
+    border-radius: 12px;
     padding: 7px;
     margin-block: 5px;
 
@@ -47,5 +48,5 @@ body a {
 }
 
 .calculator .input-btns .input-btn .number {
-
+    background-color: var(--calculator-number-input-button-background-color);
 }
