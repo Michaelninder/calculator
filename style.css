@@ -11,6 +11,8 @@
     --calculator-input-button-border-color: gray;
     --calculator-input-button-color: antiquewhite;
     --calculator-display-background-color: lightgray;
+    --calculator-reset-input-button-background-color: lightgray;
+    --calculator-reset-input-button-color: black;
     --display-font-family: 'Chakra Petch', sans-serif;
   }
   
@@ -96,6 +98,11 @@
   
   .calculator .input-btns .input-btn.number {
     background-color: var(--calculator-number-input-button-background-color);
+  }
+  
+  .calculator .input-btns .input-btn.reset {
+    background-color: var(--calculator-reset-input-button-background-color);
+    color: var(--calculator-reset-input-button-color)
   }
   
   .calculator .input-btns .input-btn.zero {
