@@ -102,11 +102,10 @@
   
   .calculator .input-btns .input-btn.reset {
     background-color: var(--calculator-reset-input-button-background-color);
-    color: var(--calculator-reset-input-button-color)
+    color: var(--calculator-reset-input-button-color);
   }
   
   .calculator .input-btns .input-btn.zero {
-    grid-column: span 2;
+    grid-column: span 1;
     border-radius: 30px;
-    width: auto;
   }
