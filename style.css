@@ -1,21 +1,28 @@
 :root {
     --background-color: antiquewhite;
-    --main-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --main-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+      sans-serif;
     --main-text-color: gray;
   
-    --calculator-padding: 50px;
+    --calculator-padding: 20px;
     --calculator-background-color: white;
     --calculator-input-button-background-color: gray;
     --calculator-number-input-button-background-color: orange;
     --calculator-input-button-border-color: gray;
     --calculator-input-button-color: antiquewhite;
     --calculator-display-background-color: lightgray;
+    --display-font-family: 'Orbitron', sans-serif;
   }
   
   body {
     background-color: var(--background-color);
     font-family: var(--main-font-family);
     color: var(--main-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
   }
   
   body a {
@@ -27,25 +34,56 @@
     padding: var(--calculator-padding);
     background-color: var(--calculator-background-color);
     display: flex;
-    gap: 5px;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+  }
+  
+  .calculator .display {
+    background-color: var(--calculator-display-background-color);
+    border-radius: 8px;
+    padding: 10px;
+    color: black;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 60px;
+    overflow: hidden;
+  }
+  
+  .calculator .display p {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: var(--display-font-family);
+    width: 100%;
+    word-wrap: break-word;
   }
   
   .calculator .input-btns {
-    padding-block: 5px;
-    padding-inline: 5px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
   }
   
   .calculator .input-btns .input-btn {
     background-color: var(--calculator-input-button-background-color);
     border: 1px solid var(--calculator-input-button-border-color);
     border-radius: 50%;
-    padding: 7px;
+    width: 60px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .calculator .input-btns .input-btn:active {
+    filter: brightness(0.8);
   }
   
   .calculator .input-btns .input-btn .btn-link {
@@ -56,17 +94,8 @@
     background-color: var(--calculator-number-input-button-background-color);
   }
   
-  .calculator .display {
-    background-color: var(--calculator-display-background-color);
-    border-radius: 12px;
-    padding: 10px;
-    color: black;
-    text-align: right;
-    margin-bottom: 10px;
-    display: flex;
-  }
-  
-  .calculator .display p {
-    margin: 0;
-    font-size: 2em;
+  .calculator .input-btns .input-btn.zero {
+    grid-column: span 2;
+    border-radius: 30px;
+    width: auto;
   }
