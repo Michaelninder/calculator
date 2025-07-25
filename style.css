@@ -11,7 +11,7 @@
     --calculator-input-button-border-color: gray;
     --calculator-input-button-color: antiquewhite;
     --calculator-display-background-color: lightgray;
-    --display-font-family: 'Orbitron', sans-serif;
+    --display-font-family: 'Chakra Petch', sans-serif;
   }
   
   body {
@@ -60,6 +60,10 @@
     font-family: var(--display-font-family);
     width: 100%;
     word-wrap: break-word;
+  }
+  
+  .calculator .display p.error {
+    color: red;
   }
   
   .calculator .input-btns {
